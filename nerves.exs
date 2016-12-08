@@ -8,7 +8,7 @@ version =
 config :nerves_system_nanopi_neo, :nerves_env,
   type: :system,
   version: version,
-  mirrors: ["https://www.nine70labs.com/nerves/nerves_system_nanopi_neo.tar.gz"],
+  mirrors: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo.tar.gz"],
   build_platform: Nerves.System.Platforms.BR,
   build_config: [
     defconfig: "nerves_defconfig",
