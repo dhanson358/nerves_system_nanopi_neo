@@ -1,4 +1,4 @@
-defmodule NervesSystemBbb.Mixfile do
+defmodule NervesSystemNanopiNeo.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,7 +6,7 @@ defmodule NervesSystemBbb.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_bbb,
+    [app: :nerves_system_nanopi_neo,
      version: @version,
      elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:nerves_system],
@@ -27,17 +27,17 @@ defmodule NervesSystemBbb.Mixfile do
 
   defp description do
     """
-    Nerves System - BeagleBone Black
+    Nerves System - NanoPi NEO
     """
   end
 
   defp package do
-    [maintainers: ["Frank Hunleth", "Justin Schneck"],
+    [maintainers: ["David Hanson"],
      files: ["rootfs-additions", "bbb-busybox.config", "LICENSE",
              "mix.exs", "nerves_defconfig", "nerves.exs", "README.md",
              "VERSION", "fwup.conf", "post-createfs.sh", "uboot",
              "uboot-script.cmd", "linux"],
      licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/nerves-project/nerves_system_bbb"}]
+     links: %{"Github" => "https://github.com/dhanson358/nerves_system_nanopi_neo"}]
   end
 end
