@@ -1,0 +1,16 @@
+diff -Naur linux-4.9-rc5/arch/arm/boot/dts/sun8i-h3-nanopi-neo.dts linux-david/arch/arm/boot/dts/sun8i-h3-nanopi-neo.dts
+--- linux-4.9-rc5/arch/arm/boot/dts/sun8i-h3-nanopi-neo.dts	2016-11-17 11:06:48.347009000 -0600
++++ linux-david/arch/arm/boot/dts/sun8i-h3-nanopi-neo.dts	2016-11-17 11:05:59.887009000 -0600
+@@ -119,6 +119,12 @@
+ 	status = "okay";
+ };
+ 
++&uart1 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart1_pins>;
++	status = "okay";
++};
++
+ &usbphy {
+ 	/* USB VBUS is always on */
+ 	status = "okay";

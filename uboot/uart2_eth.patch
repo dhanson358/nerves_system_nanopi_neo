@@ -1,0 +1,54 @@
+diff -Naur u-boot-2016.11/arch/arm/dts/sun8i-h3-nanopi-neo.dts u-boot-david/arch/arm/dts/sun8i-h3-nanopi-neo.dts
+--- u-boot-2016.11/arch/arm/dts/sun8i-h3-nanopi-neo.dts	2016-11-14 10:27:11.000000000 -0600
++++ u-boot-david/arch/arm/dts/sun8i-h3-nanopi-neo.dts	2016-11-17 17:24:22.481009000 -0600
+@@ -91,6 +91,18 @@
+ 	status = "okay";
+ };
+ 
++&emac {
++       phy=<&phy1>;
++       phy-mode = "mii";
++       allwinner,use-internal-phy;
++       allwinner,leds-active-low;
++       status = "okay";
++       
++       phy1: ethernet-phy@1 {
++               reg = <1>;
++       };
++};
++
+ &ohci3 {
+ 	status = "okay";
+ };
+@@ -119,6 +131,15 @@
+ 	status = "okay";
+ };
+ 
++
++&uart1 {
++       pinctrl-names = "default";
++       pinctrl-0 = <&uart1_pins_a>;
++       status = "okay";
++};
++
++
++
+ &usbphy {
+ 	/* USB VBUS is always on */
+ 	status = "okay";
+diff -Naur u-boot-2016.11/arch/arm/dts/sun8i-h3-orangepi-pc.dts u-boot-david/arch/arm/dts/sun8i-h3-orangepi-pc.dts
+--- u-boot-2016.11/arch/arm/dts/sun8i-h3-orangepi-pc.dts	2016-11-14 10:27:11.000000000 -0600
++++ u-boot-david/arch/arm/dts/sun8i-h3-orangepi-pc.dts	2016-11-18 09:00:28.152277000 -0600
+@@ -161,6 +161,12 @@
+ 	status = "okay";
+ };
+ 
++&uart1 {
++       pinctrl-names = "default";
++       pinctrl-0 = <&uart1_pins_a>;
++       status = "okay";
++};
++
+ &usbphy {
+ 	/* USB VBUS is always on */
+ 	status = "okay";
