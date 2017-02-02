@@ -33,7 +33,7 @@ defmodule NervesSystemNanopiNeo.Mixfile do
 
   defp package do
     [maintainers: ["David Hanson"],
-     files: ["rootfs-additions", "bbb-busybox.config", "LICENSE",
+     files: ["rootfs-additions", "busybox_defconfig", "LICENSE",
              "mix.exs", "nerves_defconfig", "nerves.exs", "README.md",
              "VERSION", "fwup.conf", "post-createfs.sh", "uboot",
              "uboot-script.cmd", "linux"],
