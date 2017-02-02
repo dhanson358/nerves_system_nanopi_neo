@@ -8,12 +8,12 @@ version =
 config :nerves_system_nanopi_neo, :nerves_env,
   type: :system,
   version: version,
-  mirrors: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo_0_0_9.tar.gz"],
+  mirrors: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo_0_0_10.tar.gz"],
   build_platform: Nerves.System.Platforms.BR,
   build_config: [
     defconfig: "nerves_defconfig",
     package_files: [
-      "bbb-busybox.config",
+      "busybox_defconfig",
       "rootfs-additions",
       "fwup.conf",
       "post-createfs.sh",
