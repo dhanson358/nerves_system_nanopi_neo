@@ -21,5 +21,6 @@ config :nerves_system_nanopi_neo, :nerves_env,
       "post-createfs.sh",
       "uboot",
       "uboot-script.cmd",
-      "linux"
+      "linux",
+      "VERSION"
   ]
