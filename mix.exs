@@ -8,11 +8,13 @@ defmodule NervesSystemNanopiNeo.Mixfile do
   def project do
     [app: :nerves_system_nanopi_neo,
      version: @version,
-     elixir: "~> 1.2",
-     compilers: Mix.compilers ++ [:nerves_system],
-     description: description,
-     package: package,
-     deps: deps]
+     elixir: "~> 1.3",
+     compilers: Mix.compilers ++ [:nerves_package],
+     description: description(),
+     package: package(),
+     deps: deps(),
+     aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]
+   ]
   end
 
   def application do
