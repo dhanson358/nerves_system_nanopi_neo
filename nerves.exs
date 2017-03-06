@@ -8,11 +8,13 @@ version =
 config :nerves_system_nanopi_neo, :nerves_env,
   type: :system,
   version: version,
-  mirrors: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo_0_0_13.tar.gz"],
-  build_platform: Nerves.System.Platforms.BR,
-  build_config: [
-    defconfig: "nerves_defconfig",
-    package_files: [
+  compiler: :nerves_package,
+  artifact_url: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo_0_0_13.tar.gz"],
+  platform: Nerves.System.BR,
+  platform_config: [
+   defconfig: "nerves_defconfig",
+  ],
+  checksum: [
       "busybox_defconfig",
       "rootfs-additions",
       "fwup.conf",
@@ -20,5 +22,4 @@ config :nerves_system_nanopi_neo, :nerves_env,
       "uboot",
       "uboot-script.cmd",
       "linux"
-    ]
   ]
