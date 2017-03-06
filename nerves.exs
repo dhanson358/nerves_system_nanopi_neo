@@ -9,7 +9,7 @@ config :nerves_system_nanopi_neo, :nerves_env,
   type: :system,
   version: version,
   compiler: :nerves_package,
-  artifact_url: ["http://www.nine70labs.com/nerves/nerves_system_nanopi_neo_0_0_13.tar.gz"],
+  artifact_url: ["https://github.com/dhanson358/nerves_system_nanopi_neo/releases/download/v0.0.13/nerves_system_nanopi_neo_013.tar.gz"],
   platform: Nerves.System.BR,
   platform_config: [
    defconfig: "nerves_defconfig",
