@@ -22,9 +22,9 @@ defmodule NervesSystemNanopiNeo.Mixfile do
   end
 
   defp deps do
-    [{:nerves, "~> 0.4.0"},
-     {:nerves_system_br, "~> 0.9.2"},
-     {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.9.0"}]
+    [{:nerves, "~> 0.5.1", runtime: false},
+     {:nerves_system_br, "~> 0.10.1", runtime: false},
+     {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.10.0", runtime: false}]
   end
 
   defp description do
