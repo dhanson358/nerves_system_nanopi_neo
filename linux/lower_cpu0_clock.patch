@@ -1,5 +1,5 @@
---- arch/arm/boot/dts/sun8i-h3.dtsi	2017-06-23 17:03:17.549885405 -0500
-+++ /tmp/arch/arm/boot/dts/sun8i-h3.dtsi	2017-06-23 17:03:01.429885405 -0500
+--- linux-4.9/arch/arm/boot/dts/sun8i-h3.dtsi		2017-06-23 17:03:17.549885405 -0500
++++ linux-custom/arch/arm/boot/dts/sun8i-h3.dtsi	2017-06-23 17:03:01.429885405 -0500
 @@ -60,7 +60,7 @@
  			reg = <0>;
  			clocks = <&ccu CLK_CPUX>;
