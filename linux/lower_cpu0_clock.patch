@@ -1,11 +1,57 @@
---- linux-4.9/arch/arm/boot/dts/sun8i-h3.dtsi		2017-06-23 17:03:17.549885405 -0500
-+++ linux-custom/arch/arm/boot/dts/sun8i-h3.dtsi	2017-06-23 17:03:01.429885405 -0500
-@@ -60,7 +60,7 @@
+diff -Naur linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3.dtsi troy_out/build/linux-0c3f5940daa807b1ddba13ae102e2d1800a7d4ba/arch/arm/boot/dts/sun8i-h3.dtsi
+--- linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3.dtsi	2017-05-11 20:03:16.000000000 -0500
++++ troy_out/build/linux-0c3f5940daa807b1ddba13ae102e2d1800a7d4ba/arch/arm/boot/dts/sun8i-h3.dtsi	2017-06-27 16:41:31.270501000 -0500
+@@ -60,7 +60,11 @@
  			reg = <0>;
  			clocks = <&ccu CLK_CPUX>;
  			clock-latency = <244144>; /* 8 32k periods */
 -			clock-frequency = <1200000000>;
 +			clock-frequency = <480000000>;
++			operating-points = <
++				/* kHz	uV */
++				480000	1100000
++			>;
  		};
  
  		cpu@1 {
+diff -Naur linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dts troy_out/build/linux-0c3f5940daa807b1ddba13ae102e2d1800a7d4ba/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dts
+--- linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dts	2017-05-11 20:03:16.000000000 -0500
++++ troy_out/build/linux-0c3f5940daa807b1ddba13ae102e2d1800a7d4ba/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dts	2017-06-27 16:38:41.802919000 -0500
+@@ -96,19 +96,6 @@
+ &cpu0 {
+ 	operating-points = <
+ 		/* kHz	  uV */
+-		1368000	1400000
+-		1344000	1400000
+-		1296000	1340000
+-		1248000	1340000
+-		1224000	1340000
+-		1200000	1320000
+-		1152000	1320000
+-		1104000	1320000
+-		1056000	1320000
+-		1008000	1200000
+-		960000	1200000
+-		816000	1100000
+-		648000	1100000
+ 		480000	1100000
+ 		240000	1100000
+ 		120000	1100000
+@@ -166,7 +153,7 @@
+ 		compatible = "silergy,sy8106a";
+ 		reg = <0x65>;
+ 		regulator-min-microvolt = <1000000>;
+-		regulator-max-microvolt = <1400000>;
++		regulator-max-microvolt = <1100000>;
+ 		regulator-ramp-delay = <200>;
+ 		regulator-boot-on;
+ 		regulator-always-on;
+@@ -291,7 +278,7 @@
+ &uart1 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&uart1_pins>;
+-	status = "disabled";
++	status = "okay";
+ };
+ 
+ &uart2 {
