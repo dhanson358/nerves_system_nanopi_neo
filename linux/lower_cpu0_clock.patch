@@ -9,7 +9,7 @@ diff -Naur linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3.dtsi troy_out/bui
 +			clock-frequency = <480000000>;
 +			operating-points = <
 +				/* kHz	uV */
-+				480000	1100000
++				480000	980000
 +			>;
  		};
  
@@ -34,13 +34,14 @@ diff -Naur linux-clean/linux-master/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dts t
 -		960000	1200000
 -		816000	1100000
 -		648000	1100000
- 		480000	1100000
- 		240000	1100000
- 		120000	1100000
+ 		480000	980000
+ 		240000	980000
+ 		120000	980000
 @@ -166,7 +153,7 @@
  		compatible = "silergy,sy8106a";
  		reg = <0x65>;
- 		regulator-min-microvolt = <1000000>;
+- 		regulator-min-microvolt = <1000000>;
++ 		regulator-min-microvolt = <980000>;
 -		regulator-max-microvolt = <1400000>;
 +		regulator-max-microvolt = <1100000>;
  		regulator-ramp-delay = <200>;
