@@ -10,7 +10,7 @@ diff -Naur u-boot-2016.11/arch/arm/dts/sun8i-h3-nanopi-neo.dts u-boot-david/arch
 +       phy-mode = "mii";
 +       allwinner,use-internal-phy;
 +       allwinner,leds-active-low;
-+       status = "okay";
++       status = "disabled";
 +       
 +       phy1: ethernet-phy@1 {
 +               reg = <1>;
