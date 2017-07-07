@@ -14,7 +14,7 @@ echo "Running Nerves U-Boot script"
 # Therefore, we hardcode root=/dev/mmcblk0p2 since we always want to mount
 # the root partition off the same device that ran u-boot and supplied
 # zImage.
-setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk0p2 rootfstype=squashfs ro rootwait
+setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk0p2 maxcpus=1 monitor_onoff=false rootfstype=squashfs ro rootwait
 
 # Load the kernel
 load mmc 0:1 ${kernel_addr_r} zImage
